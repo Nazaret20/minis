@@ -1,0 +1,267 @@
+@font-face {
+	font-family: "digital-7";
+	src: url("../font/digital-7(mono).ttf") format("truetype");
+}
+
+$font-family: "digital-7", sans-serif;
+$grey-color: #233542;
+$font-size: 1.6rem;
+$text-color: rgb(230, 230, 230);
+$primary-color: rgb(0, 235, 196);
+// $themes: (
+// 	"light": (
+// 		"background-color": #f5f5f5,
+// 		"color": #333,
+// 		"border-color": #ddd
+// 	),
+// 	"dark": (
+// 		"background-color": $grey-color,
+// 		"color": $text-color
+// 	)
+// );
+
+@mixin flex-col {
+	display: flex;
+	flex-direction: column;
+}
+
+@mixin interior-card {
+	width: 85%;
+	height: 75%;
+	background-color: rgba(255, 255, 255, 0.041);
+	margin: 3rem auto 2.5rem;
+}
+
+@mixin exterior-card {
+	color: white;
+	border: 1px solid rgb(23, 103, 109);
+	border-radius: 1rem;
+	height: 40rem;
+	box-shadow: 0px 8px 10px -6px rgba(23, 103, 109, 0.493);
+}
+
+@mixin nombreCard {
+	text-align: center;
+	font-size: $font-size;
+	color: $text-color;
+}
+
+@mixin theme($mode) {
+	background-color: map-get($themes, $mode, bg-color);
+	color: map-get($themes, $mode, text-color);
+}
+/*------------------------------------------*/
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Lexend Deca", serif;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background-color: $grey-color;
+	@include flex-col();
+	//@include theme("dark");
+}
+
+// body.light {
+// 	@include theme("light");
+// }
+
+/*-------------------HEADER-------------------*/
+header {
+	height: 10rem;
+
+	h1 {
+		color: $primary-color;
+		text-align: center;
+		font-size: 3rem;
+		font-weight: lighter;
+		padding-top: 4rem;
+	}
+}
+
+/*-------------------MAIN-------------------*/
+section {
+	height: auto;
+
+	.container-proyectos {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		gap: 4rem;
+		max-width: 90rem;
+		width: 85%;
+		//min-width: 80rem;
+		margin: 4rem auto;
+		height: auto;
+	}
+}
+
+/*----------------DIV1------------------*/
+.div1 {
+	@include exterior-card();
+	@include flex-col();
+
+	.nombre-card {
+		@include nombreCard();
+	}
+}
+
+.interior-card-div1 {
+	@include interior-card();
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	.boton-raton {
+		background-color: $primary-color;
+		width: auto;
+		height: 10rem;
+		border: none;
+		border-radius: 1rem;
+		padding: 1rem 2rem;
+		font-size: $font-size;
+		cursor: pointer;
+		transition: all 0.2s;
+
+		&:active {
+			background-color: rgb(255, 255, 255);
+		}
+	}
+
+	p {
+		font-size: $font-size;
+		width: 0.5rem;
+	}
+}
+
+/*----------------DIV2------------------*/
+.div2 {
+	@include exterior-card();
+	@include flex-col();
+
+	.nombre-card {
+		@include nombreCard();
+	}
+}
+
+.interior-card-div2 {
+	@include interior-card();
+	position: relative;
+
+	.reloj-opaco {
+		color: rgba(255, 255, 255, 0.11);
+		position: absolute;
+	}
+
+	p {
+		font-size: 8rem;
+		font-family: $font-family;
+		position: absolute;
+		top: 35%;
+		left: 7%;
+		text-shadow: 2px 2px 15px rgba(44, 255, 220, 0.486);
+		transition: opacity 0.3s ease-in-out;
+	}
+}
+/*------------------DIV3------------------*/
+
+.div3 {
+	@include exterior-card();
+	@include flex-col();
+
+	.nombre-card {
+		@include nombreCard();
+	}
+}
+
+.interior-card-div3 {
+	@include interior-card();
+
+	.container-boton-apariencia {
+		width: 20rem;
+		height: 8rem;
+		background-color: rgb(143, 143, 143);
+		margin: 12rem auto;
+		border-radius: 5rem;
+		display: flex;
+		align-items: center;
+		position: relative;
+
+		.boton-apariencia {
+			width: 6.5rem;
+			height: 6.5rem;
+			border: none;
+			border-radius: 5rem;
+			background-color: $primary-color;
+			cursor: pointer;
+			position: absolute;
+			left: 0.9rem;
+			box-shadow: 3px 7px 17px 1px rgba(0, 0, 0, 0.493);
+
+			img {
+				width: 4rem;
+			}
+		}
+	}
+}
+
+
+/*-------------------FOOTER-------------------*/
+footer {
+	height: 10rem;
+	width: 100%;
+}
+
+/*-------------------MEDIA QUERIES-------------------*/
+
+@media (max-width: 850px) {
+	section {
+		.container-proyectos {
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(6, 1fr);
+
+			.proyecto-div-card {
+				width: 40rem;
+				margin: 0 auto;
+			}
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	section {
+		.container-proyectos {
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(6, 1fr);
+
+			.proyecto-div-card {
+				width: 30rem;
+				margin: 0 auto;
+			}
+		}
+	}
+
+	.interior-card-div2 {
+		@include interior-card();
+		position: relative;
+
+		p {
+			font-size: 6rem;
+			font-family: $font-family;
+			position: absolute;
+			top: 35%;
+			left: 7%;
+		}
+
+		.reloj-opaco {
+			color: rgba(255, 255, 255, 0.26);
+			position: absolute;
+		}
+	}
+}
