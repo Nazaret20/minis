@@ -1,0 +1,96 @@
+@use 'abstracts/variables' as *;
+
+@mixin tema($modo) {
+	$mapa-temas: map-get($temas, $modo);
+
+	background-color: map-get($mapa-temas, $modo, bg-color);
+	color: map-get($mapa-temas, $modo, text-color);
+}
+
+@mixin flex-col {
+	display: flex;
+	flex-direction: column;
+}
+
+@mixin interior-card {
+	width: 85%;
+	height: 75%;
+	background-color: #ffffff0a;
+	margin: 3rem auto 2.5rem;
+}
+
+@mixin exterior-card {
+	color: #ffffff;
+	border: 1px solid #17676d;
+	border-radius: 1rem;
+	height: 40rem;
+	box-shadow: 0px 8px 10px -6px #17676d7e;
+}
+
+@mixin nombreCard {
+	text-align: center;
+	font-size: $font-size;
+	color: $text-color;
+}
+
+@mixin responsive($breakpoint) {
+	@if $breakpoint == desktop {
+		@media (min-width: 1200px) {
+			@content;
+		}
+	} @else if $breakpoint == tablet {
+		@media (max-width: 850px) {
+			@content;
+		}
+	} @else if $breakpoint == mobile {
+		@media (max-width: 500px) {
+			@content;
+		}
+	}
+}
+
+// @media (max-width: 850px) {
+// 	section {
+// 		.container-proyectos {
+// 			grid-template-columns: 1fr;
+// 			grid-template-rows: repeat(6, 1fr);
+
+// 			.proyecto-div-card {
+// 				width: 40rem;
+// 				margin: 0 auto;
+// 			}
+// 		}
+// 	}
+// }
+
+// @media (max-width: 500px) {
+// 	section {
+// 		.container-proyectos {
+// 			grid-template-columns: 1fr;
+// 			grid-template-rows: repeat(6, 1fr);
+
+// 			.proyecto-div-card {
+// 				width: 30rem;
+// 				margin: 0 auto;
+// 			}
+// 		}
+// 	}
+
+// 	.interior-card-div2 {
+// 		@include interior-card();
+// 		position: relative;
+
+// 		p {
+// 			font-size: 6rem;
+// 			font-family: $font-family;
+// 			position: absolute;
+// 			top: 35%;
+// 			left: 7%;
+// 		}
+
+// 		.reloj-opaco {
+// 			color: #ffffff42;
+// 			position: absolute;
+// 		}
+// 	}
+// }

@@ -30,12 +30,15 @@ document.addEventListener("DOMContentLoaded", () => {
 	relojDigital();
 	setInterval(relojDigital, 1000);
 
-	function theme() {
-		const botonApariencia = document.querySelector(".boton-apariencia");
+	function tema() {
+		const botonTema = document.querySelector(".boton-tema");
+		const body = document.body;
 
-		botonApariencia.addEventListener("click", () => {
-			document.body.classList.toggle("light");
+		botonTema.addEventListener("click", () => {
+			body.classList.toggle("light");
+			body.classList.toggle("dark");
+
 		});
 	}
-	theme();
+	tema();
 });
