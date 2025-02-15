@@ -1,3 +1,6 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
 /*----------------DIV GENERAL------------------*/
 .div1,
 .div2,
@@ -7,8 +10,6 @@
 .div6 {
 	@include exterior-card();
 	@include flex-col();
-
-	
 }
 
 /*----------------DIV1------------------*/
@@ -30,7 +31,7 @@
 	position: relative;
 
 	.reloj-opaco {
-		color: #ffffff1c;
+		color: $opacidad-reloj;
 		position: absolute;
 	}
 
@@ -40,10 +41,11 @@
 		position: absolute;
 		top: 35%;
 		left: 7%;
-		text-shadow: 2px 2px 15px #2cffdc7c;
+		text-shadow: 2px 2px 15px $brillo-reloj;
 		transition: opacity 0.3s ease-in-out;
 	}
 }
+
 /*------------------DIV3------------------*/
 
 .interior-card-div3 {
@@ -52,13 +54,11 @@
 	.container-boton-tema {
 		width: 20rem;
 		height: 8rem;
-		background-color: #8f8f8f;
+		background-color: $deslizante-interior;
 		margin: 12rem auto;
 		border-radius: 5rem;
 		display: flex;
 		align-items: center;
 		position: relative;
-
-
 	}
 }

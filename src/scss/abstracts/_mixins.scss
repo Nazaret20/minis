@@ -1,10 +1,12 @@
-@use 'abstracts/variables' as *;
+@use './variables' as *;
+@use 'sass:map';
+
 
 @mixin tema($modo) {
-	$mapa-temas: map-get($temas, $modo);
+	$mapa-temas: map.get($temas, $modo);
 
-	background-color: map-get($mapa-temas, $modo, bg-color);
-	color: map-get($mapa-temas, $modo, text-color);
+	background-color: map.get($mapa-temas, $modo, bg-color);
+	color: map.get($mapa-temas, $modo, text-color);
 }
 
 @mixin flex-col {
@@ -15,16 +17,16 @@
 @mixin interior-card {
 	width: 85%;
 	height: 75%;
-	background-color: #ffffff0a;
+	background-color: $card-bg;
 	margin: 3rem auto 2.5rem;
 }
 
 @mixin exterior-card {
-	color: #ffffff;
-	border: 1px solid #17676d;
+	color: $text-color;
+	border: 1px solid $card-border;
 	border-radius: 1rem;
 	height: 40rem;
-	box-shadow: 0px 8px 10px -6px #17676d7e;
+	box-shadow: 0px 8px 10px -6px $card-shadow;
 }
 
 @mixin nombreCard {
@@ -76,21 +78,3 @@
 // 		}
 // 	}
 
-// 	.interior-card-div2 {
-// 		@include interior-card();
-// 		position: relative;
-
-// 		p {
-// 			font-size: 6rem;
-// 			font-family: $font-family;
-// 			position: absolute;
-// 			top: 35%;
-// 			left: 7%;
-// 		}
-
-// 		.reloj-opaco {
-// 			color: #ffffff42;
-// 			position: absolute;
-// 		}
-// 	}
-// }
