@@ -1,5 +1,5 @@
-@use "../abstracts/mixins" as *;
-@use "../abstracts/variables" as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
 
 /*----------------DIV GENERAL------------------*/
 .div1,
@@ -8,57 +8,57 @@
 .div4,
 .div5,
 .div6 {
-	@include exterior-card();
-	@include flex-col();
+    @include exterior-card();
+    @include flex-col();
 }
 
 /*----------------DIV1------------------*/
 .interior-card-div1 {
-	@include interior-card();
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
+    @include interior-card();
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 
-	p {
-		font-size: $font-size;
-		width: 0.5rem;
-	}
+    p {
+        font-size: $font-size;
+        width: 0.5rem;
+    }
 }
 /*----------------DIV2------------------*/
 
 .interior-card-div2 {
-	@include interior-card();
-	position: relative;
+    @include interior-card();
+    position: relative;
 
-	.reloj-opaco {
-		color: $opacidad-reloj;
-		position: absolute;
-	}
+    .reloj-opaco {
+        color: $opacidad-reloj;
+        position: absolute;
+    }
 
-	p {
-		font-size: 8rem;
-		font-family: $font-family;
-		position: absolute;
-		top: 35%;
-		left: 7%;
-		text-shadow: 2px 2px 15px $brillo-reloj;
-		transition: opacity 0.3s ease-in-out;
-	}
+    p {
+        font-size: 8rem;
+        font-family: $font-family;
+        position: absolute;
+        top: 35%;
+        left: 7%;
+        text-shadow: $shadow-reloj;
+        transition: opacity 0.3s ease-in-out;
+    }
 }
 
 /*------------------DIV3------------------*/
 
 .interior-card-div3 {
-	@include interior-card();
+    @include interior-card();
 
-	.container-boton-tema {
-		width: 20rem;
-		height: 8rem;
-		background-color: $deslizante-interior;
-		margin: 12rem auto;
-		border-radius: 5rem;
-		display: flex;
-		align-items: center;
-		position: relative;
-	}
+    .container-boton-tema {
+        width: 20rem;
+        height: 8rem;
+        background-color: $deslizante-interior;
+        margin: 12rem auto;
+        border-radius: 5rem;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
 }

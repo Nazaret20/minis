@@ -1,4 +1,5 @@
-@use '../abstracts' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
 
 * {
 	margin: 0;
@@ -14,6 +15,7 @@ body {
 	@include flex-col();
 	@include tema("dark");
 	transition: background-color 0.3s ease, color 0.3s ease;
+	will-change: background-color, color;
 }
 
 body.light {
@@ -23,3 +25,4 @@ body.light {
 .body.dark {
 	@include tema("dark");
 }
+

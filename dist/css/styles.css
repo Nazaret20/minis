@@ -1,91 +1,12 @@
 /*-----------------------*/
-.dark body {
+.dark {
   background-color: #233542;
   color: #e6e6e6;
 }
 
-.dark h1 {
-  color: #00ebc4;
-}
-
-.dark .proyecto-div-card {
-  background-color: #2b4050;
-  border: 1px solid #17676d;
-  box-shadow: 0px 8px 10px -6px rgba(23, 103, 109, 0.4941176471);
-  color: #e6e6e6;
-}
-
-.dark .interior-card-div1,
-.dark .interior-card-div2,
-.dark .interior-card-div3 {
-  background-color: #374c5d;
-}
-
-.dark .div1,
-.dark .div2,
-.dark .div3,
-.dark .div4,
-.dark .div5,
-.dark .div6 {
-  color: #e6e6e6;
-  border: 1px solid #17676d;
-}
-
-.dark .nombre-card {
-  color: #e6e6e6;
-}
-
-.dark p#reloj {
-  text-shadow: 2px 2px 15px rgba(44, 255, 220, 0.4862745098);
-}
-
-.dark .interior-card-div2 .reloj-opaco {
-  color: rgba(255, 255, 255, 0.1098039216);
-}
-
-.light body {
+.light {
   background-color: #e7eaf1;
   color: #000000;
-}
-
-.light h1 {
-  color: #1a8585;
-}
-
-.light .proyecto-div-card {
-  background-color: #c4e2e0;
-  border: 1px solid #007067;
-  box-shadow: rgba(0, 126, 119, 0.1019607843);
-  color: #000000;
-}
-
-.light .interior-card-div1,
-.light .interior-card-div2,
-.light .interior-card-div3 {
-  background-color: rgba(255, 255, 255, 0.2980392157);
-}
-
-.light .div1,
-.light .div2,
-.light .div3,
-.light .div4,
-.light .div5,
-.light .div6 {
-  color: #000000;
-  border: 1px solid #007067;
-}
-
-.light .nombre-card {
-  color: #000000;
-}
-
-.light p#reloj {
-  text-shadow: 2px 2px 15px #79c9c2;
-  color: #205c60;
-}
-
-.light .interior-card-div2 .reloj-opaco {
-  color: rgba(0, 0, 0, 0.137254902);
 }
 
 * {
@@ -104,7 +25,6 @@ body {
   background-color: #233542;
   color: #e6e6e6;
   transition: background-color 0.3s ease, color 0.3s ease;
-  will-change: background-color, color;
 }
 
 body.light {
@@ -150,22 +70,9 @@ html {
   position: absolute;
   left: 0.9rem;
   box-shadow: 3px 7px 17px 1px #233542;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.3s ease-in-out;
 }
 .boton-tema img {
   width: 4rem;
-  height: 6.5rem;
-}
-
-.light .boton-tema {
-  transform: translateX(11.7rem);
-}
-
-.dark .boton-tema {
-  transform: translateX(0);
 }
 
 .nombre-card {
@@ -194,6 +101,7 @@ html {
 .interior-card-div1 {
   width: 85%;
   height: 75%;
+  background-color: rgba(255, 255, 255, 0.0392156863);
   margin: 3rem auto 2.5rem;
   display: flex;
   justify-content: space-around;
@@ -208,6 +116,7 @@ html {
 .interior-card-div2 {
   width: 85%;
   height: 75%;
+  background-color: rgba(255, 255, 255, 0.0392156863);
   margin: 3rem auto 2.5rem;
   position: relative;
 }
@@ -229,6 +138,7 @@ html {
 .interior-card-div3 {
   width: 85%;
   height: 75%;
+  background-color: rgba(255, 255, 255, 0.0392156863);
   margin: 3rem auto 2.5rem;
 }
 .interior-card-div3 .container-boton-tema {

@@ -1,40 +1,103 @@
-$font-family: "digital-7", sans-serif;
+$font-family: 'digital-7', sans-serif;
 $bg-body: #233542;
 $font-size: 1.6rem;
 $text-color: #e6e6e6;
-$primary-color: #00ebc4;
-//$card-shadow: #0000001a;
-$card-border: #17676d;
-$card-shadow: #17676d7e;
-$card-bg: #ffffff0a;
+$h1: #00ebc4;
+$card-border: 1px solid #17676d;
+$card-shadow: 0px 8px 10px -6px #17676d7e;
+$interior-card-bg: #374c5d;
+$card-bg: #2b4050;
 $active-color: #ffffff;
 $opacidad-reloj: #ffffff1c;
-$brillo-reloj: #2cffdc7c;
+$shadow-reloj: 2px 2px 15px #2cffdc7c;
 $deslizante-interior: #8f8f8f;
 /*-----------------------*/
-$card-border-light: #007067;
+$card-border-light: 1px solid #007067;
 $card-shadow-light: #007e771a;
-$card-bg-light: #b2dfdb;
+$card-bg-light: #c4e2e0;
 $text-color-light: #000000;
-$primary-color-light: #174f7c;
+$h1-light: #1a8585;
 $bg-body-light: #e7eaf1;
+$interior-card-bg-light: #ffffff4c;
+$opacidad-reloj-light: #00000023;
+$shadow-reloj-light: 2px 2px 15px #79c9c2;
+$deslizante-interior-light: #b2b2b2;
+$color-p-reloj: #205c60;
 
-$modo: "dark";
+$modo: 'dark';
 $temas: (
-	"dark": (
-        "card-border": $card-border,
-        "card-shadow": $card-shadow,
-        "card-bg": $card-bg,
-        "text-color": $text-color,
-        "primary-color": $primary-color,
-        "bg-body": $bg-body,
-	),
-    "light": (
-        "card-border": $card-border-light,
-        "card-shadow": $card-shadow-light,
-        "card-bg": $card-bg-light,
-        "text-color": $text-color-light,
-        "primary-color": $primary-color-light,
-        "bg-body": $bg-body-light,
+    'dark': (
+        'card-border': $card-border,
+        'card-shadow': $card-shadow,
+        'card-bg': $card-bg,
+        'text-color': $text-color,
+        'title': $h1,
+        'bg-body': $bg-body,
+        'interior-card-bg': $interior-card-bg,
+        'opacidad-reloj': $opacidad-reloj, 
+        'shadow-reloj': $shadow-reloj,
+    ),
+    'light': (
+        'card-border': $card-border-light,
+        'card-shadow': $card-shadow-light,
+        'card-bg': $card-bg-light,
+        'text-color': $text-color-light,
+        'title': $h1-light,
+        'bg-body': $bg-body-light,
+        'interior-card-bg': $interior-card-bg-light,
+        'opacidad-reloj': $opacidad-reloj-light, 
+        'shadow-reloj': $shadow-reloj-light,
+        'color-p-reloj': $color-p-reloj,
     ),
 );
+
+@each $nombre, $valores in $temas {
+    .#{$nombre} body {
+        background-color: map-get($valores, 'bg-body');
+        color: map-get($valores, 'text-color');
+    }
+
+    .#{$nombre} h1 {
+        color: map-get($valores, 'title');
+    }
+
+    .#{$nombre} .proyecto-div-card {
+        background-color: map-get($valores, 'card-bg');
+        border: map-get($valores, 'card-border');
+        box-shadow: map-get($valores, 'card-shadow');
+        color: map-get($valores, 'text-color');
+    }
+
+    .#{$nombre} {
+        .interior-card-div1,
+        .interior-card-div2,
+        .interior-card-div3 {
+            background-color: map-get($valores, 'interior-card-bg');
+        }
+    }
+
+    .#{$nombre} {
+        .div1,
+        .div2,
+        .div3,
+        .div4,
+        .div5,
+        .div6 {
+            color: map-get($valores, 'text-color');
+            border: map-get($valores, 'card-border');
+        }
+    }
+
+    .#{$nombre} .nombre-card {
+        color: map-get($valores, 'text-color');
+    }
+
+    .#{$nombre} p#reloj {
+        text-shadow: map-get($valores, 'shadow-reloj');
+        color: map-get($valores, 'color-p-reloj');
+    }
+
+    .#{$nombre} .interior-card-div2 .reloj-opaco {
+        color: map-get($valores, 'opacidad-reloj');
+    }
+}
