@@ -40,7 +40,7 @@
         font-family: 'digital-7';
         position: absolute;
         top: 35%;
-        left: 7%;
+        left: 10%;
         text-shadow: $shadow-reloj;
         transition: opacity 0.3s ease-in-out;
     }
@@ -52,7 +52,7 @@
     @include interior-card();
 
     .container-boton-tema {
-        width: 20rem;
+        width: 55%;
         height: 8rem;
         background-color: $deslizante-interior;
         margin: 12rem auto;
@@ -60,5 +60,22 @@
         display: flex;
         align-items: center;
         position: relative;
+    }
+}
+
+/*------------------DIV4------------------*/
+.interior-card-div4 {
+    @include interior-card();
+    @include flex-col();
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+
+    .div-colores {
+        height: 65%;
+        width: 85%;
+        border-radius: .4rem;
+        background-color: rgb(211, 211, 211);
+        
     }
 }

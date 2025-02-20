@@ -2,8 +2,8 @@
 @use 'sass:map';
 
 @mixin tema($modo) {
-    background-color: map-get(map-get($temas, $modo), 'bg-body');
-    color: map-get(map-get($temas, $modo), 'text-color');
+    background-color: map.get(map.get($temas, $modo), 'bg-body');
+    color: map.get(map.get($temas, $modo), 'text-color');
 }
 
 @mixin flex-col {

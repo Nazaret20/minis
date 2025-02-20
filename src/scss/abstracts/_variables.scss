@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 $bg-body: #233542;
 $font-size: 1.6rem;
 $text-color: #e6e6e6;
@@ -52,26 +54,27 @@ $temas: (
 
 @each $nombre, $valores in $temas {
     .#{$nombre} body {
-        background-color: map-get($valores, 'bg-body');
-        color: map-get($valores, 'text-color');
+        background-color: map.get($valores, 'bg-body');
+        color: map.get($valores, 'text-color');
     }
 
     .#{$nombre} h1 {
-        color: map-get($valores, 'title');
+        color: map.get($valores, 'title');
     }
 
     .#{$nombre} .proyecto-div-card {
-        background-color: map-get($valores, 'card-bg');
-        border: map-get($valores, 'card-border');
-        box-shadow: map-get($valores, 'card-shadow');
-        color: map-get($valores, 'text-color');
+        background-color: map.get($valores, 'card-bg');
+        border: map.get($valores, 'card-border');
+        box-shadow: map.get($valores, 'card-shadow');
+        color: map.get($valores, 'text-color');
     }
 
     .#{$nombre} {
         .interior-card-div1,
         .interior-card-div2,
-        .interior-card-div3 {
-            background-color: map-get($valores, 'interior-card-bg');
+        .interior-card-div3,
+        .interior-card-div4 {
+            background-color: map.get($valores, 'interior-card-bg');
         }
     }
 
@@ -82,21 +85,21 @@ $temas: (
         .div4,
         .div5,
         .div6 {
-            color: map-get($valores, 'text-color');
-            border: map-get($valores, 'card-border');
+            color: map.get($valores, 'text-color');
+            border: map.get($valores, 'card-border');
         }
     }
 
     .#{$nombre} .nombre-card {
-        color: map-get($valores, 'text-color');
+        color: map.get($valores, 'text-color');
     }
 
     .#{$nombre} p#reloj {
-        text-shadow: map-get($valores, 'shadow-reloj');
-        color: map-get($valores, 'color-p-reloj');
+        text-shadow: map.get($valores, 'shadow-reloj');
+        color: map.get($valores, 'color-p-reloj');
     }
 
     .#{$nombre} .interior-card-div2 .reloj-opaco {
-        color: map-get($valores, 'opacidad-reloj');
+        color: map.get($valores, 'opacidad-reloj');
     }
 }
