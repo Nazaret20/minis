@@ -119,7 +119,7 @@ body.light {
 
 @font-face {
   font-family: "digital-7";
-  src: url("../../../font/digital-7(mono).ttf") format("truetype");
+  src: url("../../../font/digital-7_mono_.woff") format(".woff"), url("../../../font/digital-7(mono).ttf") format("truetype");
 }
 html {
   font-size: 62.5%;
@@ -217,7 +217,7 @@ html {
 }
 .interior-card-div2 p {
   font-size: 8rem;
-  font-family: "digital-7", sans-serif;
+  font-family: "digital-7";
   position: absolute;
   top: 35%;
   left: 7%;

@@ -1,4 +1,3 @@
-$font-family: 'digital-7', sans-serif;
 $bg-body: #233542;
 $font-size: 1.6rem;
 $text-color: #e6e6e6;
@@ -34,7 +33,7 @@ $temas: (
         'title': $h1,
         'bg-body': $bg-body,
         'interior-card-bg': $interior-card-bg,
-        'opacidad-reloj': $opacidad-reloj, 
+        'opacidad-reloj': $opacidad-reloj,
         'shadow-reloj': $shadow-reloj,
     ),
     'light': (
@@ -45,7 +44,7 @@ $temas: (
         'title': $h1-light,
         'bg-body': $bg-body-light,
         'interior-card-bg': $interior-card-bg-light,
-        'opacidad-reloj': $opacidad-reloj-light, 
+        'opacidad-reloj': $opacidad-reloj-light,
         'shadow-reloj': $shadow-reloj-light,
         'color-p-reloj': $color-p-reloj,
     ),
