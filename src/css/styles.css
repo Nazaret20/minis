@@ -138,6 +138,10 @@ html {
   cursor: pointer;
   transition: all 0.2s;
 }
+.boton-raton:hover {
+  background-color: #86ebd9;
+  box-shadow: 0 0 2px #86ebd9;
+}
 .boton-raton:active {
   background-color: #ffffff;
 }
@@ -180,10 +184,14 @@ html {
   border: none;
   cursor: pointer;
   font-size: 1.4rem;
+  transition: all 0.2s;
 }
 .boton-colores:hover {
   background-color: #86ebd9;
   box-shadow: 0 0 2px #86ebd9;
+}
+.boton-colores:active {
+  background-color: #ffffff;
 }
 
 .nombre-card {
@@ -276,6 +284,16 @@ html {
   width: 85%;
   border-radius: 0.4rem;
   background-color: rgb(211, 211, 211);
+}
+.interior-card-div4 .div-colores-button-p {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 85%;
+  height: 18%;
+}
+.interior-card-div4 .div-colores-button-p p {
+  font-size: 1.4rem;
 }
 
 footer {

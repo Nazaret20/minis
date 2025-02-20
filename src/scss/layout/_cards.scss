@@ -15,9 +15,7 @@
 /*----------------DIV1------------------*/
 .interior-card-div1 {
     @include interior-card();
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    @include flex-row();
 
     p {
         font-size: $font-size;
@@ -74,8 +72,17 @@
     .div-colores {
         height: 65%;
         width: 85%;
-        border-radius: .4rem;
+        border-radius: 0.4rem;
         background-color: rgb(211, 211, 211);
-        
+    }
+
+    .div-colores-button-p {
+        @include flex-row();
+        width: 85%;
+        height: 18%;
+
+        p {
+            font-size: 1.4rem;
+        }
     }
 }

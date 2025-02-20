@@ -11,6 +11,12 @@
     flex-direction: column;
 }
 
+@mixin flex-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 @mixin interior-card {
     width: 85%;
     height: 75%;
