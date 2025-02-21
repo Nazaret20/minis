@@ -65,7 +65,7 @@
 .interior-card-div4 {
     @include interior-card();
     @include flex-col();
-    gap: 2rem;
+    gap: 2.5rem;
     justify-content: center;
     align-items: center;
 
@@ -87,5 +87,14 @@
             width: 7rem;
             cursor: pointer;
         }
+    }
+
+    .tippy-box[data-theme~='tippy'] {
+        background-color: rgb(0, 0, 0);
+        color: white;
+        font-size: 14px;
+        padding: 6px 10px;
+        border-radius: 5px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     }
 }

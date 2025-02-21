@@ -91,6 +91,12 @@ document.addEventListener('DOMContentLoaded', () => {
             let aleatorioRGB = `#${numeroR}${numeroG}${numeroB}`;
             pNumeroColor.textContent = aleatorioRGB;
             divColor.style.backgroundColor = aleatorioRGB;
+
+            tippy('.numero-color', {
+                content: '¡Cópiame!',
+                animation: 'fade',
+                theme: 'tippy',
+            });
         });
 
         pNumeroColor.addEventListener('click', () => {
