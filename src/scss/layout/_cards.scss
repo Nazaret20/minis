@@ -74,6 +74,7 @@
         width: 85%;
         border-radius: 0.4rem;
         background-color: rgb(211, 211, 211);
+        transition: background-color 0.2s ease-in-out;
     }
 
     .div-colores-button-p {
@@ -83,6 +84,8 @@
 
         p {
             font-size: 1.4rem;
+            width: 7rem;
+            cursor: pointer;
         }
     }
 }

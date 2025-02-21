@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     tema();
-    /*---------------------------------------------*/
+    /*---------------------DIV1------------------------*/
 
     function contadorDeClics() {
         const botonClics = document.querySelector('.boton-raton');
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     contadorDeClics();
-    /*---------------------------------------------*/
+    /*--------------------DIV2-------------------------*/
 
     function relojDigital() {
         const relojP = document.querySelector('#reloj');
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     relojDigital();
     setInterval(relojDigital, 1000);
-    /*---------------------------------------------*/
+    /*---------------------DIV3------------------------*/
 
     function tema() {
         const botonTema = document.querySelector('.boton-tema');
@@ -70,15 +70,40 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-    /*---------------------------------------------*/
+    /*--------------------DIV4-------------------------*/
 
     function coloresAleatorios() {
         const botonColores = document.querySelector('.boton-colores');
+        const divColor = document.querySelector('.div-colores');
+        const pNumeroColor = document.querySelector('.numero-color');
 
         botonColores.addEventListener('click', () => {
-            console.log("pica")
+            let numeroR = Math.floor(Math.random() * 255)
+                .toString(16)
+                .padStart(2, '0');
+            let numeroG = Math.floor(Math.random() * 255)
+                .toString(16)
+                .padStart(2, '0');
+            let numeroB = Math.floor(Math.random() * 255)
+                .toString(16)
+                .padStart(2, '0');
+
+            let aleatorioRGB = `#${numeroR}${numeroG}${numeroB}`;
+            pNumeroColor.textContent = aleatorioRGB;
+            divColor.style.backgroundColor = aleatorioRGB;
+        });
+
+        pNumeroColor.addEventListener('click', () => {
+            navigator.clipboard.writeText(pNumeroColor.textContent).then(() => {
+                let colorOriginal = pNumeroColor.textContent;
+                pNumeroColor.textContent = '¡Color copiado!';
+
+                setTimeout(() => {
+                    pNumeroColor.textContent = colorOriginal;
+                }, 1000);
+            });
         });
     }
-    coloresAleatorios()
+    coloresAleatorios();
     /*---------------------------------------------*/
 });
