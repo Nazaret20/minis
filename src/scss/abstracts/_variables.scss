@@ -13,7 +13,7 @@ $opacidad-reloj: #ffffff1c;
 $shadow-reloj: 2px 2px 15px #2cffdc7c;
 $deslizante-interior: #8f8f8f;
 $button-hover-color: #86ebd9;
-$button-shadow-hover:0 0 2px #86ebd9;
+$button-shadow-hover: 0 0 2px #86ebd9;
 /*-----------------------*/
 $card-border-light: 1px solid #007067;
 $card-shadow-light: #007e771a;
@@ -76,7 +76,8 @@ $temas: (
         .interior-card-div2,
         .interior-card-div3,
         .interior-card-div4,
-        .interior-card-div5 {
+        .interior-card-div5,
+        .interior-card-div6 {
             background-color: map.get($valores, 'interior-card-bg');
         }
     }

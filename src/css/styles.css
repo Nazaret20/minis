@@ -19,7 +19,8 @@
 .dark .interior-card-div2,
 .dark .interior-card-div3,
 .dark .interior-card-div4,
-.dark .interior-card-div5 {
+.dark .interior-card-div5,
+.dark .interior-card-div6 {
   background-color: #374c5d;
 }
 
@@ -65,7 +66,8 @@
 .light .interior-card-div2,
 .light .interior-card-div3,
 .light .interior-card-div4,
-.light .interior-card-div5 {
+.light .interior-card-div5,
+.light .interior-card-div6 {
   background-color: rgba(255, 255, 255, 0.2980392157);
 }
 
@@ -215,6 +217,25 @@ html {
   background-color: #ffffff;
 }
 
+/*-------------------------*/
+.boton-adivina-numero {
+  background-color: #00ebc4;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  font-size: 1.4rem;
+  transition: all 0.2s;
+  border: none;
+  width: 15rem;
+  height: 5rem;
+}
+.boton-adivina-numero:hover {
+  background-color: #86ebd9;
+  box-shadow: 0 0 2px #86ebd9;
+}
+.boton-adivina-numero:active {
+  background-color: #ffffff;
+}
+
 .nombre-card {
   text-align: center;
   font-size: 1.6rem;
@@ -347,6 +368,36 @@ html {
   line-height: 3rem;
   text-align: center;
   padding-top: 5rem;
+}
+
+/*------------------DIV5------------------*/
+.interior-card-div6 {
+  width: 85%;
+  height: 75%;
+  margin: 3rem auto 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.interior-card-div6 input {
+  display: block;
+  height: 4rem;
+  width: 13rem;
+  text-align: center;
+  font-size: 1.6rem;
+}
+.interior-card-div6 input[type=number]::-webkit-outer-spin-button,
+.interior-card-div6 input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.interior-card-div6 .p-adivina-numero {
+  font-size: 1.6rem;
+}
+.interior-card-div6 small {
+  font-size: 1.4rem;
 }
 
 footer {

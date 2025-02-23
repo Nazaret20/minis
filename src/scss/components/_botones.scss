@@ -1,7 +1,6 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
 
-
 .boton-raton {
     background-color: $h1;
     width: auto;
@@ -58,7 +57,7 @@
 .boton-colores {
     width: 15rem;
     height: 5rem;
-   @include smallButton();
+    @include smallButton();
 }
 
 /*-------------------------*/
@@ -66,5 +65,11 @@
     @include smallButton();
     width: 15rem;
     height: 5rem;
-    
+}
+
+/*-------------------------*/
+.boton-adivina-numero {
+    @include smallButton();
+    width: 15rem;
+    height: 5rem;
 }

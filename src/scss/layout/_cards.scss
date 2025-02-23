@@ -114,3 +114,32 @@
         }
     }
 }
+
+/*------------------DIV5------------------*/
+
+.interior-card-div6 {
+    @include interior-card();
+    @include flex-col-allCenter();
+    gap: 2rem;
+
+    input {
+        display: block;
+        height: 4rem;
+        width: 13rem;
+        text-align: center;
+        font-size: $font-size;
+    }
+    input[type='number']::-webkit-outer-spin-button,
+    input[type='number']::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    .p-adivina-numero {
+        font-size: $font-size;
+    }
+
+    small {
+        font-size: 1.4rem;
+    }
+}

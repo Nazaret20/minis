@@ -195,4 +195,39 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     generarCita();
+    /*--------------------DIV6-------------------------*/
+
+    function adivinaElNumero() {
+        const inputNumero = document.getElementById('input-numero');
+        const botonAdivinaNumero = document.querySelector('.boton-adivina-numero');
+        const mensajeAdivinaNumero = document.querySelector('.p-adivina-numero');
+        const numeroDeIntentos = document.querySelector('.numero-intentos');
+
+        let numeroSecreto = Math.floor(Math.random() * 10) + 1;
+        let intentos = 0;
+
+        botonAdivinaNumero.addEventListener('click', () => {
+            console.log('cliccc');
+            let numeroIntroducido = parseInt(inputNumero.value);
+
+            if (numeroIntroducido === numeroSecreto) {
+                mensajeAdivinaNumero.textContent = '¡Has acertado! 🎉';
+                // confetti({
+                //     particleCount: 150,
+                //     spread: 70,
+                //     origin: { y: 0.6 },
+                // });
+                // console.log(typeof confetti);
+
+                inputNumero.disabled = true;
+            } else if (numeroIntroducido < numeroSecreto) {
+                mensajeAdivinaNumero.textContent = 'Debe ser un número mayor ⬆️';
+            } else {
+                mensajeAdivinaNumero.textContent = 'Debe ser un número menor ⬇️';
+            }
+            intentos++;
+            numeroDeIntentos.textContent = intentos;
+        });
+    }
+    adivinaElNumero();
 });

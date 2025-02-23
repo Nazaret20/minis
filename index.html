@@ -4,22 +4,13 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Minis</title>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.0.0"></script> -->
         <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
         <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.min.js"></script>
-        <link
-            rel="stylesheet"
-            href="https://unpkg.com/tippy.js@6/dist/tippy.css"
-        />
-        <link
-            rel="shortcut icon"
-            href="./assets/svg/favicon.svg"
-            type="image/x-icon"
-        />
+        <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/dist/tippy.css" />
+        <link rel="shortcut icon" href="./assets/svg/favicon.svg" type="image/x-icon" />
         <link rel="stylesheet" href="./src/css/styles.css" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300&display=swap"
-            rel="stylesheet"
-        />
+        <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300&display=swap" rel="stylesheet" />
     </head>
     <body class="dark">
         <header>
@@ -50,10 +41,7 @@
                         <div class="interior-card-div3">
                             <div class="container-boton-tema">
                                 <button class="boton-tema">
-                                    <img
-                                        src="./assets/svg/dark.svg"
-                                        alt="darkmode"
-                                    />
+                                    <img src="./assets/svg/dark.svg" alt="darkmode" />
                                 </button>
                             </div>
                         </div>
@@ -64,15 +52,11 @@
                         <div class="interior-card-div4">
                             <div class="div-colores"></div>
                             <div class="div-colores-button-p">
-                                <button class="boton-colores">
-                                    Cambia el color
-                                </button>
+                                <button class="boton-colores">Cambia el color</button>
                                 <p class="numero-color"></p>
                             </div>
                         </div>
-                        <p class="nombre-card">
-                            Generador de colores aleatorios 🎨
-                        </p>
+                        <p class="nombre-card">Generador de colores aleatorios 🎨</p>
                     </div>
                     <!-- ----------------DIV5--------------------->
                     <div class="proyecto-div-card div5">
@@ -82,14 +66,20 @@
                             </div>
                             <button class="boton-citas">Lee una cita</button>
                         </div>
-                        <p class="nombre-card">
-                            Generador de citas aleatorias 📜
-                        </p>
+                        <p class="nombre-card">Generador de citas aleatorias 📜</p>
                     </div>
 
                     <!-- ----------------DIV6--------------------->
 
-                    <div class="proyecto-div-card div6"></div>
+                    <div class="proyecto-div-card div6">
+                        <div class="interior-card-div6">
+                            <input type="number" id="input-numero" placeholder="Del 1 al 10" />
+                            <button class="boton-adivina-numero">Prueba suerte</button>
+                            <p class="p-adivina-numero">¿Te atreves?</p>
+                            <small>Intentos: <span class="numero-intentos"></span></small>
+                        </div>
+                        <p class="nombre-card">Adivina el número 🎯</p>
+                    </div>
                 </div>
             </section>
         </main>
