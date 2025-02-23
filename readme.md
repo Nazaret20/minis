@@ -1,27 +1,30 @@
-🔰 Nivel Fácil (interacción básica)
-1️⃣ Contador de clics 🖱️
-2️⃣ Reloj digital con fecha ⌚
-3️⃣ Botón para cambiar tema 🌙☀️
-4️⃣ Generador de colores aleatorios 🎨
-5️⃣ Generador de citas aleatorias 📜
+<ul style= "list-style:none"> 
+<li>🔰 Nivel Fácil (interacción básica)</li>
+<li>1️⃣ Contador de clics 🖱️</li>
+<li>2️⃣ Reloj digital con fecha ⌚</li>
+<li>3️⃣ Botón para cambiar tema 🌙☀️</li>
+<li>4️⃣ Generador de colores aleatorios 🎨</li>
+<li>5️⃣ Generador de citas aleatorias 📜</li></ul><br>
 
-⚡ Nivel Intermedio (eventos y lógica básica)
-6️⃣ Adivina el número 🎯
-7️⃣ Conversor de unidades 🔄
-8️⃣ Verificación de contraseña segura 🔐
-9️⃣ Cronómetro con inicio/pausa/reset ⏱
-🔟 Juego del dado 🎲
 
-🚀 Nivel Avanzado (manipulación de DOM y animaciones)
-1️⃣1️⃣ Validación de formulario en tiempo real ✅
-1️⃣2️⃣ Barra de progreso animada 📊
-1️⃣3️⃣ Piedra, papel o tijera ✊✋✌
-1️⃣4️⃣ Carrusel de imágenes automático 📸
-1️⃣5️⃣ Calculadora básica 🧮
+<ul style= "list-style:none"> ⚡ <strong>Nivel Intermedio</strong> (eventos y lógica básica)</li>
+  <li>6️⃣ Adivina el número 🎯</li>
+  <li>7️⃣ Conversor de unidades 🔄</li>
+  <li>8️⃣ Verificación de contraseña segura 🔐</li>
+  <li>9️⃣ Cronómetro con inicio/pausa/reset ⏱</li>
+  <li>🔟 Juego del dado 🎲</li></ul><br>
 
-🧠 Nivel Experto (más lógica y almacenamiento de datos)
-1️⃣6️⃣ Lista de tareas con animaciones 📝
-1️⃣7️⃣ Memory (juego de parejas) 🃏
-1️⃣8️⃣ Simón dice 🎵
-1️⃣9️⃣ Efecto de escritura animada ⌨
-2️⃣0️⃣ Gráfico dinámico 📈
+  <ul style= "list-style:none"> 🚀 <strong>Nivel Avanzado</strong> (manipulación de DOM y animaciones)</li>
+  <li>1️⃣1️⃣ Validación de formulario en tiempo real ✅</li>
+  <li>1️⃣2️⃣ Barra de progreso animada 📊</li>
+  <li>1️⃣3️⃣ Piedra, papel o tijera ✊✋✌</li>
+  <li>1️⃣4️⃣ Carrusel de imágenes automático 📸</li>
+  <li>1️⃣5️⃣ Calculadora básica 🧮</li></ul><br>
+
+  <ul style= "list-style:none"> 🧠 <strong>Nivel Experto</strong> (más lógica y almacenamiento de datos)</li>
+  <li>1️⃣6️⃣ Lista de tareas con animaciones 📝</li>
+  <li>1️⃣7️⃣ Memory (juego de parejas) 🃏</li>
+  <li>1️⃣8️⃣ Simón dice 🎵</li>
+  <li>1️⃣9️⃣ Efecto de escritura animada ⌨</li>
+  <li>2️⃣0️⃣ Gráfico dinámico 📈</li>
+</ul>
