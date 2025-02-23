@@ -1,10 +1,10 @@
 
 🔰 <strong>Nivel Fácil</strong> (interacción básica)  
-1️⃣ Contador de clics 🖱️  
-2️⃣ Reloj digital con fecha ⌚  
-3️⃣ Botón para cambiar tema 🌙☀️  
-4️⃣ Generador de colores aleatorios 🎨  
-5️⃣ Generador de citas aleatorias 📜  
+1️⃣ ✅ Contador de clics 🖱️ 
+2️⃣ ✅ Reloj digital con fecha ⌚  
+3️⃣ ✅ Botón para cambiar tema 🌙☀️  
+4️⃣ ✅ Generador de colores aleatorios 🎨  
+5️⃣ ✅ Generador de citas aleatorias 📜  
 <br>
 
   ⚡ <strong>Nivel Intermedio</strong> (eventos y lógica básica)  
