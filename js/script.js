@@ -111,5 +111,60 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     coloresAleatorios();
-    /*---------------------------------------------*/
+    /*--------------------DIV5-------------------------*/
+
+    function generarCita() {
+        const botonCitas = document.querySelector('.boton-citas');
+        const pCitas = document.querySelector('.p-citas');
+
+        botonCitas.addEventListener('click', () => {
+            console.log('clic');
+            let numeroRandom = Math.floor(Math.random() * 9);
+            const citas = [
+                {
+                    cita: '"La vida es lo que sucede mientras estás ocupado haciendo otros planes."',
+                    autor: 'John Lennon',
+                },
+                {
+                    cita: '"El éxito es aprender a ir de fracaso en fracaso sin desesperarse."',
+                    autor: 'Winston Churchill',
+                },
+                {
+                    cita: '"Haz de tu vida un sueño, y de tu sueño una realidad."',
+                    autor: 'Antoine de Saint-Exupéry',
+                },
+                {
+                    cita: 'No cuentes los días, haz que los días cuenten.',
+                    autor: 'Muhammad Ali',
+                },
+                {
+                    cita: '"No tengas miedo de renunciar a lo bueno para ir por lo grandioso."',
+                    autor: 'John D. Rockefeller',
+                },
+                {
+                    cita: '"No encontrarás nunca un arcoíris si siempre estás mirando hacia abajo."',
+                    autor: 'Charlie Chaplin',
+                },
+                {
+                    cita: '"No esperes. El tiempo nunca será el justo."',
+                    autor: 'Napoleón Hill',
+                },
+                {
+                    cita: '"Todo parece imposible hasta que se hace."',
+                    autor: 'Nelson Mandela',
+                },
+                {
+                    cita: '"La lógica te llevará de A a B. La imaginación te llevará a cualquier lugar."',
+                    autor: ' Albert Einstein',
+                },
+                {
+                    cita: '"El mayor error que puedes cometer en la vida es tener miedo de cometer errores."',
+                    autor: 'Elbert Hubbard',
+                },
+            ];
+
+            pCitas.innerHTML = `<em>${citas[numeroRandom].cita}</em> - ${citas[numeroRandom].autor}`
+        });
+    }
+    generarCita();
 });

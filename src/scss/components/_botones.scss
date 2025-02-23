@@ -1,4 +1,6 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
 
 .boton-raton {
     background-color: $h1;
@@ -56,18 +58,13 @@
 .boton-colores {
     width: 15rem;
     height: 5rem;
-    border-radius: 0.8rem;
-    background-color: $h1;
-    border: none;
-    cursor: pointer;
-    font-size: 1.4rem;
-    transition: all 0.2s;
+   @include smallButton();
+}
 
-    &:hover {
-        background-color: $button-hover-color;
-        box-shadow: $button-shadow-hover;
-    }
-    &:active {
-        background-color: $active-color;
-    }
+/*-------------------------*/
+.boton-citas {
+    @include smallButton();
+    width: 15rem;
+    height: 5rem;
+    
 }
