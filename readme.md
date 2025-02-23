@@ -1,6 +1,6 @@
 
 🔰 <strong>Nivel Fácil</strong> (interacción básica)  
-1️⃣ ✅ Contador de clics 🖱️ 
+1️⃣ ✅ Contador de clics 🖱️  
 2️⃣ ✅ Reloj digital con fecha ⌚  
 3️⃣ ✅ Botón para cambiar tema 🌙☀️  
 4️⃣ ✅ Generador de colores aleatorios 🎨  
