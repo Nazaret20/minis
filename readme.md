@@ -7,29 +7,25 @@
 5️⃣ Generador de citas aleatorias 📜  
 <br>
 
-<ul style="list-style: none; padding: 0;">
-  <li>⚡ <strong>Nivel Intermedio</strong> (eventos y lógica básica)</li>
-  <li>6️⃣ Adivina el número 🎯</li>
-  <li>7️⃣ Conversor de unidades 🔄</li>
-  <li>8️⃣ Verificación de contraseña segura 🔐</li>
-  <li>9️⃣ Cronómetro con inicio/pausa/reset ⏱</li>
-  <li>🔟 Juego del dado 🎲</li>
-</ul><br>
+  ⚡ <strong>Nivel Intermedio</strong> (eventos y lógica básica)  
+  6️⃣ Adivina el número 🎯  
+  7️⃣ Conversor de unidades 🔄  
+  8️⃣ Verificación de contraseña segura 🔐  
+  9️⃣ Cronómetro con inicio/pausa/reset ⏱  
+  🔟 Juego del dado 🎲  
+<br>
 
-<ul style="list-style: none; padding: 0;">  
-  <li>🚀 <strong>Nivel Avanzado</strong> (manipulación de DOM y animaciones)</li>
-  <li>1️⃣1️⃣ Validación de formulario en tiempo real ✅</li>
-  <li>1️⃣2️⃣ Barra de progreso animada 📊</li>
-  <li>1️⃣3️⃣ Piedra, papel o tijera ✊✋✌</li>
-  <li>1️⃣4️⃣ Carrusel de imágenes automático 📸</li>
-  <li>1️⃣5️⃣ Calculadora básica 🧮</li>
-</ul><br>
+  🚀 <strong>Nivel Avanzado</strong> (manipulación de DOM y animaciones)  
+  1️⃣1️⃣ Validación de formulario en tiempo real ✅  
+  1️⃣2️⃣ Barra de progreso animada 📊  
+  1️⃣3️⃣ Piedra, papel o tijera ✊✋✌  
+  1️⃣4️⃣ Carrusel de imágenes automático 📸  
+  1️⃣5️⃣ Calculadora básica 🧮  
+<br>
 
-<ul style="list-style: none; padding: 0;"> 
-  <li>🧠 <strong>Nivel Experto</strong> (más lógica y almacenamiento de datos)</li>
-  <li>1️⃣6️⃣ Lista de tareas con animaciones 📝</li>
-  <li>1️⃣7️⃣ Memory (juego de parejas) 🃏</li>
-  <li>1️⃣8️⃣ Simón dice 🎵</li>
-  <li>1️⃣9️⃣ Efecto de escritura animada ⌨</li>
-  <li>2️⃣0️⃣ Gráfico dinámico 📈</li>
-</ul>
+  🧠 <strong>Nivel Experto</strong> (más lógica y almacenamiento de datos)  
+  1️⃣6️⃣ Lista de tareas con animaciones 📝  
+  1️⃣7️⃣ Memory (juego de parejas) 🃏  
+  1️⃣8️⃣ Simón dice 🎵  
+  1️⃣9️⃣ Efecto de escritura animada ⌨  
+  2️⃣0️⃣ Gráfico dinámico 📈  
