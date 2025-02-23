@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <ul style="list-style: none; padding: 0;"> 
+=======
+<ul style= "list-style:none"> 
+>>>>>>> d8245fe1fc658a13dc9fef418b8bf61a9500ec96
   <li>🔰 <strong>Nivel Fácil</strong> (interacción básica)</li>
   <li>1️⃣ Contador de clics 🖱️</li>
   <li>2️⃣ Reloj digital con fecha ⌚</li>
@@ -8,7 +12,11 @@
 </ul><br>
 
 
+<<<<<<< HEAD
 <ul style="list-style: none; padding: 0;">
+=======
+<ul style= "list-style:none">
+>>>>>>> d8245fe1fc658a13dc9fef418b8bf61a9500ec96
   <li>⚡ <strong>Nivel Intermedio</strong> (eventos y lógica básica)</li>
   <li>6️⃣ Adivina el número 🎯</li>
   <li>7️⃣ Conversor de unidades 🔄</li>
@@ -17,7 +25,11 @@
   <li>🔟 Juego del dado 🎲</li>
 </ul><br>
 
+<<<<<<< HEAD
 <ul style="list-style: none; padding: 0;">  
+=======
+<ul style= "list-style:none">  
+>>>>>>> d8245fe1fc658a13dc9fef418b8bf61a9500ec96
   <li>🚀 <strong>Nivel Avanzado</strong> (manipulación de DOM y animaciones)</li>
   <li>1️⃣1️⃣ Validación de formulario en tiempo real ✅</li>
   <li>1️⃣2️⃣ Barra de progreso animada 📊</li>
@@ -26,7 +38,11 @@
   <li>1️⃣5️⃣ Calculadora básica 🧮</li>
 </ul><br>
 
+<<<<<<< HEAD
 <ul style="list-style: none; padding: 0;"> 
+=======
+<ul style= "list-style:none"> 
+>>>>>>> d8245fe1fc658a13dc9fef418b8bf61a9500ec96
   <li>🧠 <strong>Nivel Experto</strong> (más lógica y almacenamiento de datos)</li>
   <li>1️⃣6️⃣ Lista de tareas con animaciones 📝</li>
   <li>1️⃣7️⃣ Memory (juego de parejas) 🃏</li>
