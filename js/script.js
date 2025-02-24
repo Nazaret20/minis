@@ -206,18 +206,20 @@ document.addEventListener('DOMContentLoaded', () => {
         let numeroSecreto = Math.floor(Math.random() * 10) + 1;
         let intentos = 0;
 
+        inputNumero.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter') {
+                event.preventDefault(); // Evita que el formulario se recargue (si lo hay)
+                botonAdivinaNumero.click(); // Simula el clic en el botón
+            }
+        });
+
         botonAdivinaNumero.addEventListener('click', () => {
             console.log('cliccc');
             let numeroIntroducido = parseInt(inputNumero.value);
 
             if (numeroIntroducido === numeroSecreto) {
                 mensajeAdivinaNumero.textContent = '¡Has acertado! 🎉';
-                // confetti({
-                //     particleCount: 150,
-                //     spread: 70,
-                //     origin: { y: 0.6 },
-                // });
-                // console.log(typeof confetti);
+                lanzarConfeti();
 
                 inputNumero.disabled = true;
             } else if (numeroIntroducido < numeroSecreto) {
@@ -230,4 +232,49 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     adivinaElNumero();
+
+    function lanzarConfeti() {
+        const divJuego = document.querySelector('.interior-card-div6');
+        const rect = divJuego.getBoundingClientRect(); // Obtiene la posición y tamaño del div
+
+        confetti({
+            particleCount: 100, // Cantidad de partículas
+            spread: 70, // Ángulo de dispersión
+            origin: {
+                x: (rect.left + rect.width / 2) / window.innerWidth, // Centrar en el div
+                y: (rect.top + rect.height / 2) / window.innerHeight, // Centrar en el div
+            },
+        });
+    }
+    /*--------------------DIV7-------------------------*/
+
+    const selectMedida1 = document.getElementById('select-medida1');
+    const selectMedida2 = document.getElementById('select-medida2');
+    const inputMedida = document.getElementById('input-medida');
+    const outputMedida = document.getElementById('output-medida');
+
+    const conversiones = {
+        cm: { m: 0.01, km: 0.00001 },
+        m: { cm: 100, km: 0.001 },
+        km: { cm: 100000, m: 1000 },
+    };
+
+    function conversorUnidades() {
+        let valorSelectMedida1 = selectMedida1.value;
+        let valorSelectMedida2 = selectMedida2.value;
+        let numeroMedidaIntroducido = parseFloat(inputMedida.value) || 0;
+
+        if (valorSelectMedida1 === valorSelectMedida2) {
+            outputMedida.textContent = numeroMedidaIntroducido;
+        } else {
+            let factorConversion = conversiones[valorSelectMedida1]?.[valorSelectMedida2] || 1;
+            outputMedida.textContent = numeroMedidaIntroducido * factorConversion;
+        }
+    }
+
+    selectMedida1.addEventListener('change', conversorUnidades);
+    selectMedida2.addEventListener('change', conversorUnidades);
+    inputMedida.addEventListener('input', conversorUnidades);
+
+    conversorUnidades();
 });

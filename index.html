@@ -4,9 +4,11 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Minis</title>
-        <!-- <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.0.0"></script> -->
+
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0"></script>
         <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
         <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.min.js"></script>
+
         <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/dist/tippy.css" />
         <link rel="shortcut icon" href="./assets/svg/favicon.svg" type="image/x-icon" />
         <link rel="stylesheet" href="./src/css/styles.css" />
@@ -70,7 +72,6 @@
                     </div>
 
                     <!-- ----------------DIV6--------------------->
-
                     <div class="proyecto-div-card div6">
                         <div class="interior-card-div6">
                             <input type="number" id="input-numero" placeholder="Del 1 al 10" />
@@ -79,6 +80,37 @@
                             <small>Intentos: <span class="numero-intentos"></span></small>
                         </div>
                         <p class="nombre-card">Adivina el número 🎯</p>
+                    </div>
+
+                    <!-- ----------------DIV7--------------------->
+                    <div class="proyecto-div-card div7">
+                        <div class="interior-card-div7">
+                            <div class="div-medida-select1">
+                                <select name="select-medida1" id="select-medida1">
+                                    <option value="cm">Centímetro</option>
+                                    <option value="m">Metro</option>
+                                    <option value="km">Kilómetro</option>
+                                </select>
+                                <input type="number" id="input-medida" placeholder="Escribe tu medida" />
+                            </div>
+
+                            <p class="equivalente">=</p>
+
+                            <div class="div-medida-select2">
+                                <select name="select-medida2" id="select-medida2">
+                                    <option value="cm">Centímetro</option>
+                                    <option value="m">Metro</option>
+                                    <option value="km">Kilómetro</option>
+                                </select>
+                                <p id="output-medida"></p>
+                            </div>
+                        </div>
+                        <p class="nombre-card">Conversor de unidades 🔄</p>
+                    </div>
+
+                    <!-- ----------------DIV8--------------------->
+                    <div class="proyecto-div-card div8">
+                        <div class="interior-card-div8"></div>
                     </div>
                 </div>
             </section>

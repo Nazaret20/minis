@@ -20,7 +20,9 @@
 .dark .interior-card-div3,
 .dark .interior-card-div4,
 .dark .interior-card-div5,
-.dark .interior-card-div6 {
+.dark .interior-card-div6,
+.dark .interior-card-div7,
+.dark .interior-card-div8 {
   background-color: #374c5d;
 }
 
@@ -67,7 +69,9 @@
 .light .interior-card-div3,
 .light .interior-card-div4,
 .light .interior-card-div5,
-.light .interior-card-div6 {
+.light .interior-card-div6,
+.light .interior-card-div7,
+.light .interior-card-div8 {
   background-color: rgba(255, 255, 255, 0.2980392157);
 }
 
@@ -248,7 +252,9 @@ html {
 .div3,
 .div4,
 .div5,
-.div6 {
+.div6,
+.div7,
+.div8 {
   color: #e6e6e6;
   border: 1px solid #17676d;
   border-radius: 1rem;
@@ -380,6 +386,7 @@ html {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  position: relative;
 }
 .interior-card-div6 input {
   display: block;
@@ -398,6 +405,75 @@ html {
 }
 .interior-card-div6 small {
   font-size: 1.4rem;
+}
+
+.interior-card-div7 {
+  width: 85%;
+  height: 75%;
+  margin: 3rem auto 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.interior-card-div7 .div-medida-select1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 35%;
+}
+.interior-card-div7 .div-medida-select1 #select-medida1 {
+  width: 60%;
+  height: 3.5rem;
+  border: none;
+  background-color: #b5f4e9;
+}
+.interior-card-div7 .div-medida-select1 #input-medida {
+  width: 58.8%;
+  height: 5rem;
+  border: none;
+  padding-left: 0.4rem;
+  font-size: 1.6rem;
+}
+.interior-card-div7 .div-medida-select1 input[type=number]::-webkit-outer-spin-button,
+.interior-card-div7 .div-medida-select1 input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.interior-card-div7 .equivalente {
+  height: 4rem;
+  font-size: 3rem;
+  color: #00ebc4;
+}
+.interior-card-div7 .div-medida-select2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 35%;
+}
+.interior-card-div7 .div-medida-select2 #select-medida2 {
+  width: 60%;
+  height: 3.5rem;
+  border: none;
+  background-color: #b5f4e9;
+}
+.interior-card-div7 .div-medida-select2 #output-medida {
+  width: 58.8%;
+  height: 3.5rem;
+  background-color: white;
+  color: black;
+  padding: 1.5rem 0 0 0.4rem;
+  font-size: 1.6rem;
+}
+
+.interior-card-div8 {
+  width: 85%;
+  height: 75%;
+  margin: 3rem auto 2.5rem;
 }
 
 footer {
@@ -422,7 +498,7 @@ section {
 section .container-proyectos {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   gap: 4rem;
   max-width: 90rem;
   width: 85%;
