@@ -376,7 +376,7 @@ html {
   padding-top: 5rem;
 }
 
-/*------------------DIV5------------------*/
+/*------------------DIV6------------------*/
 .interior-card-div6 {
   width: 85%;
   height: 75%;
@@ -407,6 +407,7 @@ html {
   font-size: 1.4rem;
 }
 
+/*------------------DIV7------------------*/
 .interior-card-div7 {
   width: 85%;
   height: 75%;
@@ -470,10 +471,46 @@ html {
   font-size: 1.6rem;
 }
 
+/*------------------DIV8------------------*/
 .interior-card-div8 {
   width: 85%;
   height: 75%;
   margin: 3rem auto 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.interior-card-div8 .container-password {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.interior-card-div8 .container-password .label-password {
+  width: 100%;
+  text-align: left;
+  font-size: 1.6rem;
+}
+.interior-card-div8 .container-password #input-password {
+  width: 94%;
+  height: 3rem;
+  font-size: 1.6rem;
+  padding: 0.8rem;
+}
+.interior-card-div8 .container-password .p-indicador-password {
+  width: 100%;
+  height: 3rem;
+  text-align: right;
+  font-size: 1.2rem;
+}
+.interior-card-div8 .container-password li {
+  width: 100%;
+  height: 2rem;
+  font-size: 1.3rem;
+  text-align: left;
 }
 
 footer {

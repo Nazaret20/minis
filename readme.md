@@ -8,8 +8,8 @@
 <br>
 
   ⚡ <strong>Nivel Intermedio</strong> (eventos y lógica básica)  
-  6️⃣ Adivina el número 🎯  
-  7️⃣ Conversor de unidades 🔄  
+  6️⃣ ✅ Adivina el número 🎯  
+  7️⃣ ✅ Conversor de unidades 🔄  
   8️⃣ Verificación de contraseña segura 🔐  
   9️⃣ Cronómetro con inicio/pausa/reset ⏱  
   🔟 Juego del dado 🎲  

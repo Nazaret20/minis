@@ -277,4 +277,54 @@ document.addEventListener('DOMContentLoaded', () => {
     inputMedida.addEventListener('input', conversorUnidades);
 
     conversorUnidades();
+    /*--------------------DIV8-------------------------*/
+
+    const inputPassword = document.getElementById('input-password');
+    const pIndicadorPassword = document.querySelector('.p-indicador-password');
+
+    function verificarPassword() {
+        inputPassword.addEventListener('input', () => {
+            let inputPasswordValue = inputPassword.value;
+            console.log(inputPasswordValue);
+
+            let condicionCumplida = 0;
+
+            if (inputPasswordValue.length < 8) {
+                pIndicadorPassword.textContent = 'Introduce contraseña';
+            }
+
+            if (/[A-Z]/.test(inputPasswordValue)) {
+                condicionCumplida++;
+                pIndicadorPassword.textContent = 'Contraseña débil';
+            }
+
+            if (/[a-z]/.test(inputPasswordValue)) {
+                condicionCumplida++;
+            }
+
+            if (/\d/.test(inputPasswordValue)) {
+                condicionCumplida++;
+            }
+
+            if (/[@#$%^&*]/.test(inputPasswordValue)) {
+                condicionCumplida++;
+            }
+
+            if (condicionCumplida === 1) {
+                pIndicadorPassword.textContent = 'Contraseña débil';
+                pIndicadorPassword.style.color = '#ff7575';
+            }
+
+            if (condicionCumplida === 2 || condicionCumplida === 3) {
+                pIndicadorPassword.textContent = 'Contraseña media';
+                pIndicadorPassword.style.color = '#ffed75';
+            }
+
+            if (condicionCumplida === 4) {
+                pIndicadorPassword.textContent = 'Contraseña fuerte';
+                pIndicadorPassword.style.color = '#7cee7c';
+            }
+        });
+    }
+    verificarPassword();
 });
