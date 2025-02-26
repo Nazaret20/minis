@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         body.classList.add(temaGuardado);
+        document.documentElement.dataset.tema = temaGuardado;
         iconoTema.src = temaGuardado === 'dark' ? darkModeSVG : lightModeSVG;
 
         if (temaGuardado === 'light') {
@@ -59,13 +60,10 @@ document.addEventListener('DOMContentLoaded', () => {
             body.classList.toggle('dark');
             botonTema.classList.toggle('pulsado');
 
-            if (body.classList.contains('light')) {
-                iconoTema.src = lightModeSVG;
-                localStorage.setItem('temas', 'light');
-            } else {
-                iconoTema.src = darkModeSVG;
-                localStorage.setItem('temas', 'dark');
-            }
+            let nuevoTema = body.classList.contains('light') ? 'light' : 'dark';
+            document.documentElement.dataset.tema = nuevoTema;
+            iconoTema.src = nuevoTema === 'light' ? lightModeSVG : darkModeSVG;
+            localStorage.setItem('temas', nuevoTema);
         });
     }
     /*--------------------DIV4-------------------------*/
@@ -281,50 +279,108 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const inputPassword = document.getElementById('input-password');
     const pIndicadorPassword = document.querySelector('.p-indicador-password');
+    const barraProgreso = document.querySelector('.barra-progreso');
+    const botonTema = document.querySelector('.boton-tema');
+
+    const colores = {
+        oscuro: { rojo: '#ff7575', amarillo: '#ffdf00', verde: '#7cee7c' },
+        claro: { rojo: '#b40018', amarillo: '#b59b00', verde: '#008f00' },
+    };
+
+    function actualizarIndicador(condicionCumplida, longitudPassword) {
+        const temaActual = document.body.classList.contains('dark') ? 'oscuro' : 'claro';
+
+        let color = colores[temaActual].rojo;
+        let mensaje = '';
+        let porcentaje = 0;
+
+        if (longitudPassword === 0) {
+            // Campo vacío
+            mensaje = 'Introduce contraseña';
+            porcentaje = 0;
+        } else if (longitudPassword < 8) {
+            // Menos de 8 caracteres - contraseña muy débil
+            mensaje = 'Contraseña muy débil';
+            color = colores[temaActual].rojo;
+            // Calculamos el porcentaje según cuántos caracteres ha escrito (máx 30% hasta llegar a 8)
+            porcentaje = Math.min(30, (longitudPassword / 8) * 30);
+        } else {
+            // 8 o más caracteres, evaluamos la fuerza
+            if (condicionCumplida === 0) {
+                mensaje = 'Contraseña muy débil';
+                color = colores[temaActual].rojo;
+                porcentaje = 33;
+            } else if (condicionCumplida === 1) {
+                mensaje = 'Contraseña débil';
+                color = colores[temaActual].rojo;
+                porcentaje = 45;
+            } else if (condicionCumplida === 2) {
+                mensaje = 'Contraseña media';
+                color = colores[temaActual].amarillo;
+                porcentaje = 66;
+            } else if (condicionCumplida === 3) {
+                mensaje = 'Contraseña media-fuerte';
+                color = colores[temaActual].amarillo;
+                porcentaje = 80;
+            } else if (condicionCumplida === 4) {
+                mensaje = 'Contraseña fuerte';
+                color = colores[temaActual].verde;
+                porcentaje = 100;
+            }
+        }
+
+        pIndicadorPassword.textContent = mensaje;
+        pIndicadorPassword.style.color = color;
+
+        // ⬇️ Aplicar cambios a la barra correctamente ⬇️
+        barraProgreso.style.width = `${porcentaje}%`;
+        barraProgreso.style.backgroundColor = color;
+    }
 
     function verificarPassword() {
         inputPassword.addEventListener('input', () => {
             let inputPasswordValue = inputPassword.value;
-            console.log(inputPasswordValue);
-
+            let longitudPassword = inputPasswordValue.length;
             let condicionCumplida = 0;
 
-            if (inputPasswordValue.length < 8) {
-                pIndicadorPassword.textContent = 'Introduce contraseña';
+            if (longitudPassword >= 8) {
+                if (/[A-Z]/.test(inputPasswordValue)) {
+                    condicionCumplida++;
+                }
+
+                if (/[a-z]/.test(inputPasswordValue)) {
+                    condicionCumplida++;
+                }
+
+                if (/\d/.test(inputPasswordValue)) {
+                    condicionCumplida++;
+                }
+
+                if (/[@#$%^&*]/.test(inputPasswordValue)) {
+                    condicionCumplida++;
+                }
             }
 
-            if (/[A-Z]/.test(inputPasswordValue)) {
-                condicionCumplida++;
-                pIndicadorPassword.textContent = 'Contraseña débil';
-            }
-
-            if (/[a-z]/.test(inputPasswordValue)) {
-                condicionCumplida++;
-            }
-
-            if (/\d/.test(inputPasswordValue)) {
-                condicionCumplida++;
-            }
-
-            if (/[@#$%^&*]/.test(inputPasswordValue)) {
-                condicionCumplida++;
-            }
-
-            if (condicionCumplida === 1) {
-                pIndicadorPassword.textContent = 'Contraseña débil';
-                pIndicadorPassword.style.color = '#ff7575';
-            }
-
-            if (condicionCumplida === 2 || condicionCumplida === 3) {
-                pIndicadorPassword.textContent = 'Contraseña media';
-                pIndicadorPassword.style.color = '#ffed75';
-            }
-
-            if (condicionCumplida === 4) {
-                pIndicadorPassword.textContent = 'Contraseña fuerte';
-                pIndicadorPassword.style.color = '#7cee7c';
-            }
+            actualizarIndicador(condicionCumplida, longitudPassword);
         });
     }
+
+    botonTema.addEventListener('click', () => {
+        setTimeout(() => {
+            const inputPasswordValue = inputPassword.value;
+            let longitudPassword = inputPasswordValue.length;
+            let condicionCumplida = 0;
+
+            if (longitudPassword >= 8) {
+                if (/[A-Z]/.test(inputPasswordValue)) condicionCumplida++;
+                if (/[a-z]/.test(inputPasswordValue)) condicionCumplida++;
+                if (/\d/.test(inputPasswordValue)) condicionCumplida++;
+                if (/[@#$%^&*]/.test(inputPasswordValue)) condicionCumplida++;
+            }
+
+            actualizarIndicador(condicionCumplida, longitudPassword);
+        }, 10);
+    });
+
     verificarPassword();
 });

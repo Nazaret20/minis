@@ -230,6 +230,23 @@
             padding: 0.8rem;
         }
 
+        .contenedor-barra {
+            width: 100%;
+            height: 1rem;
+            background-color: #ddd;
+            border-radius: 0.5rem;
+            overflow: hidden;
+
+            .barra-progreso {
+                height: 100%;
+                width: 0%;
+                background-color: red;
+                transition:
+                    width 0.3s ease,
+                    background-color 0.3s ease;
+            }
+        }
+
         .p-indicador-password {
             width: 100%;
             height: 3rem;

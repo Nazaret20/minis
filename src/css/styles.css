@@ -500,6 +500,19 @@ html {
   font-size: 1.6rem;
   padding: 0.8rem;
 }
+.interior-card-div8 .container-password .contenedor-barra {
+  width: 100%;
+  height: 1rem;
+  background-color: #ddd;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.interior-card-div8 .container-password .contenedor-barra .barra-progreso {
+  height: 100%;
+  width: 0%;
+  background-color: red;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
 .interior-card-div8 .container-password .p-indicador-password {
   width: 100%;
   height: 3rem;
