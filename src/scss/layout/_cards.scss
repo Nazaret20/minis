@@ -2,14 +2,7 @@
 @use '../abstracts/variables' as *;
 
 /*----------------DIV GENERAL------------------*/
-.div1,
-.div2,
-.div3,
-.div4,
-.div5,
-.div6,
-.div7,
-.div8 {
+.div-exterior {
     @include exterior-card();
     @include flex-col();
 }
@@ -261,4 +254,47 @@
             text-align: left;
         }
     }
+}
+
+/*------------------DIV9------------------*/
+.interior-card-div9 {
+    @include interior-card();
+    @include flex-col-allCenter();
+    gap: 3rem;
+
+    .container-cronometro {
+        width: 80%;
+        height: 16rem;
+        border-radius: .5rem;
+        box-shadow: 0 0 1rem #23c4b7;
+        position: relative;
+        background-color: #19c7b9;
+        @include flex-col-allCenter();
+
+        .cronometro-opaco,
+        .cronometro {
+            position: absolute;
+        }
+
+        .cronometro-opaco {
+            color: $opacidad-cronometro;
+        }
+
+        p {
+            font-size: 8rem;
+            font-family: 'digital-7';
+            color: $text-color;
+        }
+    }
+
+    .container-cronometro-botones {
+        width: 80%;
+        height: 5rem;
+        @include flex-row();
+    }
+}
+
+/*------------------DIV10------------------*/
+.interior-card-div10 {
+    @include interior-card();
 }

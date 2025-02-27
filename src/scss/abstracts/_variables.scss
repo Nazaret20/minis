@@ -15,6 +15,7 @@ $deslizante-interior: #8f8f8f;
 $button-hover-color: #86ebd9;
 $button-shadow-hover: 0 0 2px #86ebd9;
 $bg-select-medida: #b5f4e9;
+$opacidad-cronometro: #ffffff39;
 /*-----------------------*/
 $card-border-light: 1px solid #007067;
 $card-shadow-light: #007e771a;
@@ -27,8 +28,6 @@ $opacidad-reloj-light: #00000023;
 $shadow-reloj-light: 2px 2px 15px #79c9c2;
 $deslizante-interior-light: #b2b2b2;
 $color-p-reloj: #205c60;
-
-
 
 $modo: 'dark';
 $temas: (
@@ -82,18 +81,15 @@ $temas: (
         .interior-card-div5,
         .interior-card-div6,
         .interior-card-div7,
-        .interior-card-div8 {
+        .interior-card-div8,
+        .interior-card-div9,
+        .interior-card-div10 {
             background-color: map.get($valores, 'interior-card-bg');
         }
     }
 
     .#{$nombre} {
-        .div1,
-        .div2,
-        .div3,
-        .div4,
-        .div5,
-        .div6 {
+        .div-general {
             color: map.get($valores, 'text-color');
             border: map.get($valores, 'card-border');
         }
@@ -110,5 +106,12 @@ $temas: (
 
     .#{$nombre} .interior-card-div2 .reloj-opaco {
         color: map.get($valores, 'opacidad-reloj');
+    }
+
+    .#{$nombre} {
+        .boton-inicio, .boton-pausa,
+        .boton-reset {
+            background-color: map.get($valores, 'card-bg');
+        }
     }
 }

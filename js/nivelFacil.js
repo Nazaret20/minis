@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     tema();
-    relojDigital();
+
     /*---------------------DIV1------------------------*/
 
     function contadorDeClics() {
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         relojP.textContent = `${hora}:${minutos}:${segundos}`;
     }
-
+    relojDigital();
     setInterval(relojDigital, 1000);
     /*---------------------DIV3------------------------*/
 

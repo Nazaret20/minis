@@ -185,4 +185,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     verificarPassword();
+
+    /*--------------------DIV9-------------------------*/
+
+    const botonInicio = document.querySelector('.boton-inicio');
+    const botonPausa = document.querySelector('.boton-pausa');
+    const botonReset = document.querySelector('.boton-reset');
+    const pCronometro = document.querySelector('.cronometro');
+
+    let tiempoTranscurrido = 0;
+    let intervalo = null; // Inicialmente no hay intervalo activo
+
+    function iniciarCronometro() {
+        if (!intervalo) {
+            // Solo inicia si no hay un intervalo activo
+            intervalo = setInterval(() => {
+                tiempoTranscurrido++;
+                pCronometro.textContent = tiempoTranscurrido;
+            }, 1000);
+        }
+    }
+
+    botonInicio.addEventListener('click', iniciarCronometro);
+
+    botonPausa.addEventListener('click', () => {
+        clearInterval(intervalo);
+        intervalo = null; // Para permitir reiniciar correctamente después
+    });
+
+    botonReset.addEventListener('click', () => {
+        clearInterval(intervalo);
+        tiempoTranscurrido = 0;
+        pCronometro.textContent = 0;
+        intervalo = null;
+    });
 });
